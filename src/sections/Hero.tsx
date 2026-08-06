@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { personalData } from '../data/personal';
 import Magnetic from '../components/ui/Magnetic';

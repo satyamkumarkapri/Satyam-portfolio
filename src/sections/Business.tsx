@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import SplitText from '../components/ui/SplitText';
 import SectionHeader from '../components/ui/SectionHeader';
 
 const Business: React.FC = () => {
