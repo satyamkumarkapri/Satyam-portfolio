@@ -5,7 +5,7 @@ import type { ProjectData } from '../components/ui/ProjectCard';
 import ProjectCard from '../components/ui/ProjectCard';
 import SectionHeader from '../components/ui/SectionHeader';
 import ProjectModal from '../components/ui/ProjectModal';
-import { Search } from 'lucide-react';
+import { Search, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useScrollDrag } from '../hooks/useScrollDrag';
 
 const categories = ["ALL", "AI", "JAVA", "FULL STACK", "DATA", "WEB"];
@@ -23,6 +23,18 @@ const Projects: React.FC = () => {
     handleMouseUp,
     handleMouseMove
   } = useScrollDrag();
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: -400, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
 
   // Filter projects based on category and search query
   const filteredProjects = projectsData.filter(project => {
@@ -117,6 +129,24 @@ const Projects: React.FC = () => {
              </div>
           </div>
         </div>
+      </div>
+
+      {/* Scroll Controls */}
+      <div className="container mx-auto px-6 md:px-12 flex justify-end gap-4 mt-2 pb-8">
+        <button 
+          onClick={scrollLeft}
+          className="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-primary-dim hover:text-accent-violet hover:border-accent-violet/50 transition-all hover:-translate-y-1"
+          aria-label="Scroll left"
+        >
+          <ChevronLeft size={20} />
+        </button>
+        <button 
+          onClick={scrollRight}
+          className="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-primary-dim hover:text-accent-violet hover:border-accent-violet/50 transition-all hover:-translate-y-1"
+          aria-label="Scroll right"
+        >
+          <ChevronRight size={20} />
+        </button>
       </div>
 
       <ProjectModal 
