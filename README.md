@@ -1,32 +1,51 @@
-# React + TypeScript + Vite
+# Satyam Kumar Kapri - Personal Portfolio 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> An interactive, highly animated, and premium personal portfolio built for performance and aesthetics.
 
-Currently, two official plugins are available:
+Welcome to the source code of my personal portfolio. This website serves as my digital laboratory where I showcase my projects, skills, and journey as a Computer Science & Engineering student at KL University.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
+- **Premium Aesthetics:** Dark mode default with vibrant neon cyan, blue, and purple glassmorphism UI.
+- **Interactive Terminal:** A fully functional mock terminal (`Satyam OS`) that visitors can interact with using commands like `whoami`, `skills`, and `projects`.
+- **Fluid Animations:** Smooth scroll handling, magnetic buttons, and page transitions powered by Framer Motion.
+- **Serverless Contact Form:** Secure and immediate email delivery using Web3Forms.
+- **Fully Responsive:** Tailored experiences across mobile, tablet, and desktop devices.
 
-## React Compiler
+## 🛠️ Tech Stack
+- **Framework:** React 19 + TypeScript
+- **Build Tool:** Vite
+- **Styling:** Tailwind CSS + Custom CSS (for glass effects and gradients)
+- **Animations:** Framer Motion, React Three Fiber (3D Elements)
+- **Icons:** Lucide React & React Icons
+- **Deployment:** Vercel
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Running Locally
 
-## Expanding the Oxlint configuration
+To run this project on your local machine:
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/satyamkumarkapri/Satyam-portfolio.git
+   cd Satyam-portfolio
+   ```
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   Navigate to `http://localhost:5173`
+
+## 📬 Contact
+- **Email:** satyamkumarkapri17@gmail.com
+- **LinkedIn:** [satyamkumarkapri](https://www.linkedin.com/in/satyamkumarkapri)
+- **GitHub:** [satyamkumarkapri](https://github.com/satyamkumarkapri)
+
+---
+*Designed & Built by Satyam Kumar Kapri*
