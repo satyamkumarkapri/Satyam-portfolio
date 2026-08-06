@@ -15,9 +15,9 @@ const ProjectTerminal: React.FC = () => {
 {`   _____       _______     __          __  __ 
   / ____|   /\\|__   __\\ \\ / /    /\\   |  \\/  |
  | (___    /  \\  | |   \\ V /    /  \\  | \\  / |
-  \\___ \\  / /\\ \\ | |    > <    / /\\ \\ | |\\/| |
-  ____) |/ ____ \\| |   / . \\  / ____ \\| |  | |
- |_____//_/    \\_\\_|  /_/ \\_\\/_/    \\_\\_|  |_|`}
+  \\___ \\  / /\\ \\ | |    | |    / /\\ \\ | |\\/| |
+  ____) |/ ____ \\| |    | |   / ____ \\| |  | |
+ |_____//_/    \\_\\_|    |_|  /_/    \\_\\_|  |_|`}
           </pre>
           <div className="flex items-center gap-2 mb-1">
             <span className="px-2 py-0.5 bg-accent-blue/20 text-accent-blue text-[10px] rounded border border-accent-blue/30">SYSTEM</span>
