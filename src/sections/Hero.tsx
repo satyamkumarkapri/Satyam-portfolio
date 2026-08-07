@@ -127,7 +127,7 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, scale: 0.9, x: 20 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex-shrink-0 w-full max-w-sm lg:w-[400px] xl:w-[480px] hidden lg:block"
+            className="flex-shrink-0 w-full max-w-sm sm:max-w-md lg:w-[400px] xl:w-[480px] mt-12 lg:mt-0 mx-auto lg:mx-0"
           >
             <div className="relative w-full aspect-square lg:aspect-[4/5] rounded-[32px] overflow-hidden p-[3px] bg-gradient-to-br from-accent-violet via-accent-cyan to-[#00ff88] shadow-[0_0_40px_rgba(0,240,255,0.2)] group hover:shadow-[0_0_60px_rgba(0,240,255,0.4)] transition-shadow duration-500">
               <div className="absolute inset-0 bg-background rounded-[30px]" />
