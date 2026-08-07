@@ -18,7 +18,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="relative w-full h-screen flex flex-col justify-center overflow-hidden">
+    <section id="home" className="relative w-full min-h-[100svh] flex flex-col justify-center overflow-x-hidden pt-20 lg:pt-0">
       {/* Massive Background Text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <h1 className="text-[20vw] font-display font-bold text-primary opacity-5 whitespace-nowrap select-none">
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 md:px-12 pt-20">
+      <div className="relative z-10 container mx-auto px-6 md:px-12 py-12 md:py-20">
         <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-12 lg:gap-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

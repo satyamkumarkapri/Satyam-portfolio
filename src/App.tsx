@@ -20,7 +20,7 @@ function App() {
   return (
     <ThemeProvider>
       <Router>
-        <div className="w-full min-h-screen bg-background text-primary selection:bg-accent-blue/30 selection:text-primary relative">
+        <div className="w-full min-h-screen bg-background text-primary selection:bg-accent-blue/30 selection:text-primary relative overflow-x-hidden">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="*" element={<NotFound />} />
