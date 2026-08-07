@@ -64,45 +64,62 @@ const About: React.FC = () => {
               </p>
             </div>
 
-            {/* Profile Image Experience */}
+            {/* Core Focus Glass Card */}
             <motion.div 
-              className="relative w-full max-w-md aspect-square md:aspect-auto md:h-[400px] mt-8 mx-auto lg:mx-0"
+              className="relative w-full max-w-md mt-8 mx-auto lg:mx-0"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <TiltCard className="w-full h-full">
+              <TiltCard className="w-full">
                 {/* Animated Gradient Border */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-accent-violet via-accent-blue to-accent-cyan rounded-[2rem] blur opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-glow" />
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-accent-violet via-accent-blue to-accent-cyan rounded-[2rem] blur opacity-40 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse-glow" />
                 
-                <div className="relative w-full h-full rounded-3xl overflow-hidden group border border-white/10 dark:border-white/5 shadow-2xl bg-surface">
-                  {/* The actual profile image */}
-                  <img 
-                    src="/satyam.png" 
-                    alt="Satyam Kumar Kapri"
-                    className="absolute inset-0 z-20 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
-                  />
+                <div className="relative w-full rounded-3xl overflow-hidden group border border-white/10 dark:border-white/5 shadow-2xl glass-panel p-8 sm:p-10">
+                  {/* Inner subtle gradient background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent z-0 pointer-events-none" />
                   
-                  {/* Fallback pattern if image is missing */}
-                  <div className="hidden absolute inset-0 z-0 flex flex-col items-center justify-center text-primary-dim">
-                    <div className="w-24 h-24 mb-4 border border-border rounded-full flex items-center justify-center bg-transparent/50 shadow-sm">
-                      <span className="font-display font-bold text-2xl">SK</span>
-                    </div>
-                    <span className="font-mono text-xs tracking-widest font-semibold">ADD PROFILE IMAGE</span>
-                  </div>
+                  {/* Decorative glowing orbs */}
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-accent-blue/20 rounded-full blur-[40px] -translate-y-1/2 translate-x-1/2 pointer-events-none transition-transform duration-700 group-hover:scale-150" />
+                  <div className="absolute bottom-0 left-0 w-40 h-40 bg-accent-violet/20 rounded-full blur-[40px] translate-y-1/2 -translate-x-1/2 pointer-events-none transition-transform duration-700 group-hover:scale-150" />
 
-                  {/* Overlays on top of the image */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent z-10 pointer-events-none" />
-                  <div className="absolute inset-0 bg-accent-blue/10 mix-blend-overlay z-10 group-hover:bg-transparent transition-colors duration-500 pointer-events-none" />
+                  <div className="relative z-10 flex flex-col gap-6">
+                    <h3 className="text-sm font-mono font-bold tracking-[0.2em] text-transparent bg-clip-text bg-gradient-to-r from-accent-violet to-accent-cyan mb-2">
+                      CORE FOCUS
+                    </h3>
+                    
+                    {[
+                      { icon: '🤖', text: 'Artificial Intelligence' },
+                      { icon: '💻', text: 'Software Engineering' },
+                      { icon: '📊', text: 'Business Strategy' },
+                      { icon: '🚀', text: 'Innovation' },
+                      { icon: '🎯', text: 'Lifelong Learning' }
+                    ].map((item, index) => (
+                      <motion.div 
+                        key={item.text}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.7 + (index * 0.1) }}
+                        className="flex items-center gap-5 group/item cursor-default"
+                      >
+                        <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/10 flex items-center justify-center text-2xl group-hover/item:scale-110 group-hover/item:bg-white/10 group-hover/item:border-white/20 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.02)] group-hover/item:shadow-[0_0_20px_rgba(0,240,255,0.15)] relative overflow-hidden">
+                          <div className="absolute inset-0 bg-gradient-to-br from-accent-violet/20 to-accent-cyan/20 opacity-0 group-hover/item:opacity-100 transition-opacity duration-300" />
+                          <span className="relative z-10 transform group-hover/item:rotate-12 transition-transform duration-300">{item.icon}</span>
+                        </div>
+                        <span className="text-lg font-medium text-primary-dim group-hover/item:text-primary transition-colors duration-300 tracking-wide group-hover/item:translate-x-1 transform">
+                          {item.text}
+                        </span>
+                      </motion.div>
+                    ))}
+                  </div>
 
                   {/* Scanning line effect */}
                   <div className="absolute inset-0 z-20 pointer-events-none opacity-20">
                     <div className="w-full h-[1px] bg-accent-cyan shadow-[0_0_15px_#00f0ff] animate-[scan_3s_ease-in-out_infinite]" />
                   </div>
                 </div>
-
-                {/* Floating Tags have been removed */}
               </TiltCard>
             </motion.div>
           </motion.div>
