@@ -5,7 +5,7 @@ import Magnetic from '../components/ui/Magnetic';
 import SplitText from '../components/ui/SplitText';
 import { Mail } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-import profilePic from '../assets/satyam.png';
+import profilePic from '../assets/satyam.jpg';
 
 const Hero: React.FC = () => {
   const [currentRoleIndex, setCurrentRoleIndex] = React.useState(0);

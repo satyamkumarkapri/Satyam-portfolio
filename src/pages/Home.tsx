@@ -7,7 +7,6 @@ import CommandPalette from '../components/navigation/CommandPalette';
 import AskSatyamAI from '../components/ai/AskSatyamAI';
 import ProjectTerminal from '../components/terminal/ProjectTerminal';
 import Hero from '../sections/Hero';
-import IdentityStrip from '../sections/IdentityStrip';
 import About from '../sections/About';
 import Metrics from '../sections/Metrics';
 import Journey from '../sections/Journey';
@@ -52,7 +51,6 @@ const Home: React.FC = () => {
             <Navigation />
             
             <Hero />
-            <IdentityStrip />
             <About />
             <Metrics />
             <Journey />
